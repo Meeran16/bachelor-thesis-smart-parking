@@ -2,7 +2,7 @@
 
 Bachelor of Engineering final-year group project that explored a smart parking prototype using computer vision, optical character recognition (OCR), and a simple parking-booking interface.
 
-> **Repository status:** This repository is a reconstruction from the preserved 2021 final project report. The original development folder is no longer available. The ANPR and IP-camera code in `src/` was reconstructed from the report appendix and reorganized for readability. The screenshots in `docs/screenshots/` were extracted from the original report.
+> \*\*Repository status:\*\* This repository is a reconstruction from the preserved 2021 final project report. The original development folder is no longer available. The ANPR and IP-camera code in `src/` was reconstructed from the report appendix and reorganized for readability. The screenshots in `docs/screenshots/` were extracted from the original report.
 
 ## Project Overview
 
@@ -21,91 +21,91 @@ The project report also documented a booking interface with registration, login,
 
 ## System Workflow
 
-![Smart Parking workflow](docs/screenshots/workflow.png)
+!\[Smart Parking workflow](docs/screenshots/workflow.png)
 
 ## ANPR Pipeline
 
 The original implementation described the following image-processing stages:
 
-- Grayscale conversion
-- Bilateral filtering / noise reduction
-- Canny edge detection
-- Contour detection
-- Four-corner plate-region approximation
-- Plate masking/localization
-- OCR with Pytesseract
-- Registration-number comparison
+* Grayscale conversion
+* Bilateral filtering / noise reduction
+* Canny edge detection
+* Contour detection
+* Four-corner plate-region approximation
+* Plate masking/localization
+* OCR with Pytesseract
+* Registration-number comparison
 
 ### Example preprocessing
 
-| Grayscale | Binarization / Filtering | Edge Detection |
-|---|---|---|
-| ![Grayscale](docs/screenshots/grayscale.jpg) | ![Binarization](docs/screenshots/binarization.jpg) | ![Edge detection](docs/screenshots/edge_detection.jpg) |
+|Grayscale|Binarization / Filtering|Edge Detection|
+|-|-|-|
+|!\[Grayscale](docs/screenshots/grayscale.jpg)|!\[Binarization](docs/screenshots/binarization.jpg)|!\[Edge detection](docs/screenshots/edge\_detection.jpg)|
 
 ### Plate localization
 
-![Plate localization](docs/screenshots/plate_localization.jpg)
+!\[Plate localization](docs/screenshots/plate\_localization.jpg)
 
 ## Booking Interface
 
-| Registration | Login |
-|---|---|
-| ![Registration page](docs/screenshots/registration.png) | ![Login page](docs/screenshots/login.png) |
+|Registration|Login|
+|-|-|
+|!\[Registration page](docs/screenshots/registration.png)|!\[Login page](docs/screenshots/login.png)|
 
 ### Parking-slot interface
 
-![Parking slots](docs/screenshots/parking_slots.jpg)
+!\[Parking slots](docs/screenshots/parking\_slots.jpg)
 
 ## Example Outputs
 
-| Registered vehicle | System output |
-|---|---|
-| ![Registered vehicle](docs/screenshots/registered_vehicle.jpg) | ![Registered output](docs/screenshots/registered_output.png) |
+|Registered vehicle|System output|
+|-|-|
+|!\[Registered vehicle](docs/screenshots/registered\_vehicle.jpg)|!\[Registered output](docs/screenshots/registered\_output.png)|
 
-| Unregistered vehicle | System output |
-|---|---|
-| ![Unregistered vehicle](docs/screenshots/unregistered_vehicle.jpg) | ![Unregistered output](docs/screenshots/unregistered_output.png) |
+|Unregistered vehicle|System output|
+|-|-|
+|!\[Unregistered vehicle](docs/screenshots/unregistered\_vehicle.jpg)|!\[Unregistered output](docs/screenshots/unregistered\_output.png)|
 
 ## Technologies Documented in the Original Project
 
-- Python 3.6
-- OpenCV
-- Pytesseract / Tesseract OCR
-- Pandas
-- NumPy
-- Imutils
-- Flask
-- HTML / CSS
-- MongoDB Compass
-- Raspberry Pi
-- Raspberry Pi Camera
-- Jupyter Notebook
-- Visual Studio Code
+* Python 3.6
+* OpenCV
+* Pytesseract / Tesseract OCR
+* Pandas
+* NumPy
+* Imutils
+* Flask
+* HTML / CSS
+* MongoDB Compass
+* Raspberry Pi
+* Raspberry Pi Camera
+* Jupyter Notebook
+* Visual Studio Code
 
 ## Repository Structure
 
 ```text
-Bachelor-Project-Smart-Parking-Reconstructed/
+bachelor-thesis-smart-parking/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 ├── src/
 │   ├── anpr.py
-│   └── ip_camera.py
+│   └── ip\_camera.py
 ├── docs/
 │   └── screenshots/
 │       ├── workflow.png
 │       ├── grayscale.jpg
 │       ├── binarization.jpg
-│       ├── edge_detection.jpg
-│       ├── plate_localization.jpg
+│       ├── edge\_detection.jpg
+│       ├── plate\_localization.jpg
 │       ├── registration.png
 │       ├── login.png
-│       ├── parking_slots.jpg
-│       ├── registered_vehicle.jpg
-│       ├── registered_output.png
-│       ├── unregistered_vehicle.jpg
-│       └── unregistered_output.png
+│       ├── parking\_slots.jpg
+│       ├── registered\_vehicle.jpg
+│       ├── registered\_output.png
+│       ├── unregistered\_vehicle.jpg
+│       └── unregistered\_output.png
 └── paper/
     └── README.md
 ```
@@ -123,8 +123,8 @@ Optional arguments allow the Tesseract executable path and a registration CSV fi
 Example:
 
 ```bash
-python src/anpr.py vehicle.jpg \
-  --tesseract "C:/Program Files/Tesseract-OCR/tesseract.exe" \
+python src/anpr.py vehicle.jpg \\
+  --tesseract "C:/Program Files/Tesseract-OCR/tesseract.exe" \\
   --registrations registrations.csv
 ```
 
@@ -142,21 +142,21 @@ The script:
 
 ## IP-Camera Prototype
 
-The original appendix also contained a small OpenCV script that read frames from an IP Webcam URL. A cleaned reconstruction is available in `src/ip_camera.py`.
+The original appendix also contained a small OpenCV script that read frames from an IP Webcam URL. A cleaned reconstruction is available in `src/ip\_camera.py`.
 
 ```bash
-python src/ip_camera.py http://192.168.43.61:8080/
+python src/ip\_camera.py http://192.168.43.61:8080/
 ```
 
 The actual address depends on the camera/device configuration.
 
 ## Important Limitations
 
-- The original complete source-code folder was not preserved.
-- The report appendix contains the ANPR and IP-camera portions, but not the complete Flask/MongoDB booking application source.
-- The current code is therefore a **report-based reconstruction**, not a claim that the complete 2021 application has been recovered.
-- The original implementation used Windows-specific paths and older library versions; the reconstructed scripts replace hard-coded paths with command-line arguments.
-- No new accuracy, throughput, or performance claims are added because the preserved report does not provide a reproducible benchmark supporting them.
+* The original complete source-code folder was not preserved.
+* The report appendix contains the ANPR and IP-camera portions, but not the complete Flask/MongoDB booking application source.
+* The current code is therefore a **report-based reconstruction**, not a claim that the complete 2021 application has been recovered.
+* The original implementation used Windows-specific paths and older library versions; the reconstructed scripts replace hard-coded paths with command-line arguments.
+* No new accuracy, throughput, or performance claims are added because the preserved report does not provide a reproducible benchmark supporting them.
 
 ## Project Context
 
@@ -168,10 +168,11 @@ The actual address depends on the camera/device configuration.
 
 ### Project Team
 
-- Meeran Mydeen S
-- Ezhilan C
-- Annamalai R
+* Meeran Mydeen S
+* Ezhilan C
+* Annamalai R
 
 ## Source
 
 This repository was reconstructed from the group's preserved final project report submitted in May 2021.
+
