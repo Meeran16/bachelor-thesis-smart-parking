@@ -2,7 +2,7 @@
 
 Bachelor of Engineering final-year group project that explored a smart parking prototype using computer vision, optical character recognition (OCR), and a simple parking-booking interface.
 
-> \*\*Repository status:\*\* This repository is a reconstruction from the preserved 2021 final project report. The original development folder is no longer available. The ANPR and IP-camera code in `src/` was reconstructed from the report appendix and reorganized for readability. The screenshots in `docs/screenshots/` were extracted from the original report.
+> **Repository status:** This repository is a reconstruction from the preserved 2021 final project report. The original development folder is no longer available. The ANPR and IP-camera code in `src/` was reconstructed from the report appendix and reorganized for readability. The screenshots in `docs/screenshots/` were extracted from the original report.
 
 ## Project Overview
 
@@ -21,7 +21,7 @@ The project report also documented a booking interface with registration, login,
 
 ## System Workflow
 
-!\[Smart Parking workflow](docs/screenshots/workflow.png)
+![Smart Parking workflow](docs/screenshots/workflow.png)
 
 ## ANPR Pipeline
 
@@ -40,31 +40,31 @@ The original implementation described the following image-processing stages:
 
 |Grayscale|Binarization / Filtering|Edge Detection|
 |-|-|-|
-|!\[Grayscale](docs/screenshots/grayscale.jpg)|!\[Binarization](docs/screenshots/binarization.jpg)|!\[Edge detection](docs/screenshots/edge\_detection.jpg)|
+|![Grayscale](docs/screenshots/grayscale.jpg)|![Binarization](docs/screenshots/binarization.jpg)|![Edge detection](docs/screenshots/edge_detection.jpg)|
 
 ### Plate localization
 
-!\[Plate localization](docs/screenshots/plate\_localization.jpg)
+![Plate localization](docs/screenshots/plate_localization.jpg)
 
 ## Booking Interface
 
 |Registration|Login|
 |-|-|
-|!\[Registration page](docs/screenshots/registration.png)|!\[Login page](docs/screenshots/login.png)|
+|![Registration page](docs/screenshots/registration.png)|![Login page](docs/screenshots/login.png)|
 
 ### Parking-slot interface
 
-!\[Parking slots](docs/screenshots/parking\_slots.jpg)
+![Parking slots](docs/screenshots/parking_slots.jpg)
 
 ## Example Outputs
 
 |Registered vehicle|System output|
 |-|-|
-|!\[Registered vehicle](docs/screenshots/registered\_vehicle.jpg)|!\[Registered output](docs/screenshots/registered\_output.png)|
+|![Registered vehicle](docs/screenshots/registered_vehicle.jpg)|![Registered output](docs/screenshots/registered_output.png)|
 
 |Unregistered vehicle|System output|
 |-|-|
-|!\[Unregistered vehicle](docs/screenshots/unregistered\_vehicle.jpg)|!\[Unregistered output](docs/screenshots/unregistered\_output.png)|
+|![Unregistered vehicle](docs/screenshots/unregistered_vehicle.jpg)|![Unregistered output](docs/screenshots/unregistered_output.png)|
 
 ## Technologies Documented in the Original Project
 
@@ -91,21 +91,21 @@ bachelor-thesis-smart-parking/
 ├── .gitignore
 ├── src/
 │   ├── anpr.py
-│   └── ip\_camera.py
+│   └── ip_camera.py
 ├── docs/
 │   └── screenshots/
 │       ├── workflow.png
 │       ├── grayscale.jpg
 │       ├── binarization.jpg
-│       ├── edge\_detection.jpg
-│       ├── plate\_localization.jpg
+│       ├── edge_detection.jpg
+│       ├── plate_localization.jpg
 │       ├── registration.png
 │       ├── login.png
-│       ├── parking\_slots.jpg
-│       ├── registered\_vehicle.jpg
-│       ├── registered\_output.png
-│       ├── unregistered\_vehicle.jpg
-│       └── unregistered\_output.png
+│       ├── parking_slots.jpg
+│       ├── registered_vehicle.jpg
+│       ├── registered_output.png
+│       ├── unregistered_vehicle.jpg
+│       └── unregistered_output.png
 └── paper/
     └── README.md
 ```
@@ -142,10 +142,10 @@ The script:
 
 ## IP-Camera Prototype
 
-The original appendix also contained a small OpenCV script that read frames from an IP Webcam URL. A cleaned reconstruction is available in `src/ip\_camera.py`.
+The original appendix also contained a small OpenCV script that read frames from an IP Webcam URL. A cleaned reconstruction is available in `src/ip_camera.py`.
 
 ```bash
-python src/ip\_camera.py http://192.168.43.61:8080/
+python src/ip_camera.py http://192.168.43.61:8080/
 ```
 
 The actual address depends on the camera/device configuration.
